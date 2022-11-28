@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>IHC</title>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  @keyframes fadein{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes movimento{
+    from{
+      transform: translateY(-5px);
+    }
+    to{
+      transform: translateY(5px);
+    }
+  }
+  </style>
+</head>
 
+<body>
+
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid justify-content-evenly"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="#inicio" onclick="mostrar('inicio')">ÍNICIO</a></li><li class="nav-item"><a class="nav-link" href="#analise" onclick="mostrar('analise')">ANÁLISE</a></li><li class="nav-item"><a class="nav-link" href="#contato" onclick="mostrar('contato')">CONTATO</a></li></ul>
+  </div>
+</nav>
+
+<a id="seta" style="opacity: 0" class="fixed-bottom d-flex justify-content-center" href="javascript:void"><ruby><img style="height: 50%; max-width: 50%" src="seta.png"><rt class="text-black fs-5 fw-light">clique na seta</rt></ruby></a>
+
+<div class="container-fluid pt-5 pb-5" style="background: url('bcb_1.jpg') no-repeat center fixed">
+<div id="inicio">
+    <h1 class="text-uppercase text-white display-3 fw-bold" style="text-shadow: #000 1px 1px">Análise de Correlação Entre IPCA, SELIC e Cotação do Dólar</h1>
+    <br>
+    <h1 class="text-uppercase text-white display-5" style="text-shadow: #000 1px 1px">no Período Pré e Pós Pandemia</h1>
+    <div class="container mt-5 mx-3 p-1 text-bg-light text-wrap">
+      <p class="fs-2 fw-lighter">
+      Esta pesquisa tem como objetivo expor as funcionalidades da Linguagem <code>Python</code> e suas bibliotecas para análise de dados.<br>
+      </p>
+    </div>
+</div>
+</div>
+
+<hr style="opacity:0">
+
+<div id="analise" style="display:none" class="container-fluid pt-2 pb-5 bt-3">
+    <h2 class="text-uppercase">Metodologia</h2>
+    <p>Utilizamos bases de dados dos portais de transparência como <mark>BACEN</mark>, <mark>IBGE</mark> e <mark>IPCA</mark>, sobre cotação do dólar, inflação e taxas de juros.</p>
+    <br>
+    <p>Para manipulação, análise e representação gráfica dos dados, empregamos a linguagem Python e as suas seguintes bibliotecas: <code>pandas</code>, <code>matplotlib</code>, <code>numpy</code>.</p>
+    <br>
+    <p>Através das ferramentas citadas, pudemos então obter visualizações gráficas seguindo os seguintes passos:<br>carregar e tratar dados com pandas &rarr; Transformar dataframes em array com numpy &rarr; Plotar gráficos com Matplotlib.</p>
+    <br>
+    <h2 class="text-uppercase">Resultados</h2>
+    <p>Utilizando o método <code>describe</code> do pandas, pudemos obter informações relevantes para a análise dos datasets, como média, desvio padrão, valores mínimos e máximos.</p>
+    <br>
+    <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <figure class="figure">
+          <img src="dolar.png" class="figure-img img-fluid rounded" alt="Cotação Dólar">
+        <figcaption class="figure-caption"><b>Fig 1.</b> Cotação do Dólar</figcaption>
+        </figure>
+      </div>
+      <div class="col-md">
+        <figure class="figure">
+          <img src="ipca.png" class="figure-img img-fluid rounded" alt="Grafico IPCA">
+        <figcaption class="figure-caption"><b>Fig 2.</b> Variação do IPCA</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg">
+        <figure class="figure">
+          <img src="selic.png" class="figure-img img-fluid rounded" alt="Grafico IPCA">
+        <figcaption class="figure-caption"><b>Fig 3.</b> Variação da Taxa SELIC</figcaption>
+        </figure>
+      </div>
+    </div>
+    </div>
+    <p>A partir da análise dos resultados alcançados, se observa:</p>
+    <ul>
+    <li>A valorização da moeda americana da faixa dos R$3,00 para quase R$6,00 durante o auge da pandemia em 2020;</li>
+    <li>Houve um período de deflação com IPCA a -0,38 entre maio e junho de 2020, porém a inflação predomina;</li>
+    <li>O período com as menores taxas de juros se deu em fevereiro de 2020, posteriormente houve constante crescimento.</li>
+    </ul>
+    <p>Em relação aos dados, podemos inferir que no primeiro semestre de 2020 houve o aumento do dólar, deflação e diminuição das taxas de juros em comparação com 2019. A partir do segundo semestre, já com os efeitos  da pandemia, podemos notar crescimento do dólar e dos juros, assim como da inflação.</p>
+    <p>Estes aparentam ser sintomas de uma recessão na economia.</p>
+</div>
+
+<hr style="opacity:0">
+
+<div id="contato" style="display:none" class="container-fluid bg-light p-2">
+  <div class="row">
+    <div class="col-md">
+      <h3>DÚVIDAS?</h3>
+      <p>Daniel Netto Cieplinski - <a style="text-decoration:none" href="mailto:danielcieplinski@unisantos.br">danielcieplinski@unisantos.br</a></p>
+      <p>Levy Souto Sousa - <a style="text-decoration:none" href="mailto:levys@unisantos.br">levys@unisantos.br</a></p>
+      <p>Lucas Francisco Justo - <a style="text-decoration:none" href="mailto:lucasfranciscojusto@unisantos.br">lucasfranciscojusto@unisantos.br</a></p>
+    </div>
+    <div class="col-md">
+      <div class="mb-3">
+        <label for="mensagemEmail1" class="form-label">Seu e-mail</label>
+        <input type="email" class="form-control" id="mensagemEmail1" placeholder="usuario@unisantos.br">
+      </div>
+      <div class="mb-3">
+        <label for="mensagemEmail2" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagemEmail2" rows="3"></textarea>
+      </div>
+      <div class="col-auto">
+        <button type="submit" disabled class="btn btn-primary mb-3">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let x = document.getElementById("seta")
+  let seq = ["inicio", "analise", "contato"]
+  let i = 0
+
+  onload = function(){
+    x.setAttribute("style", "animation: movimento 1.5s infinite alternate, fadein 1s;");
+  }
+
+  function checar(x){
+    if(i >= seq.length -1 ){ x.remove();}
+  }
+
+  function mostrar(secao){
+    i = seq.indexOf(secao)
+    for(a=0;a<=i;a++){
+      z = document.getElementById(seq[a])
+      z.removeAttribute("style")
+    }
+    checar(x)
+  }
+
+  x.addEventListener("click", ()=>{
+    let z = document.getElementById(seq[++i]);
+    z = document.getElementById(seq[i]);
+    z.setAttribute("style", "opacity:1");
+    document.location = "#"+ seq[i];
+    checar(x)
+  });
+</script>
+</body>
+</html>
